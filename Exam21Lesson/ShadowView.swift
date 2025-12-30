@@ -31,6 +31,10 @@ class ShadowView: UIView {
         addSubview(imageView)
     }
     
+    func updateImage(imageName: String) {
+        imageView.image = UIImage(named: imageName)
+    }
+    
     private func setupView() {
         layer.cornerRadius = 20
         layer.shadowColor = UIColor.black.cgColor
