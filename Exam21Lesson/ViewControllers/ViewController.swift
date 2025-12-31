@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private let textLabel = UILabel()
     private let imageTea = ShadowView(imageName: NameTea.tea_1.rawValue)
-    private let lastButton = CustomButton(textButton: "Last", bgColor: .blue)
+    private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal)
     private let nextButton = CustomButton(textButton: "Next", bgColor: .white)
     private let firstButton = CustomButton(textButton: "First", bgColor: .red)
     private let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
