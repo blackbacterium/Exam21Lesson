@@ -98,6 +98,7 @@ private extension ViewController {
                 stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                 stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+                stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
                 
                 imageTea.heightAnchor.constraint(equalTo: stackView.widthAnchor),
                 
@@ -106,7 +107,7 @@ private extension ViewController {
                 nextButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
                 nextButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 50),
                 
-                firstButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 100),
+                firstButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 80),
                 firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         }

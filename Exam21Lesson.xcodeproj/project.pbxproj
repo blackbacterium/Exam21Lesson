@@ -6,30 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5923CFCD2F057092001A7BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5923CFBF2F057092001A7BA4 /* Assets.xcassets */; };
+		5923CFCF2F057092001A7BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5923CFC32F057092001A7BA4 /* LaunchScreen.storyboard */; };
+		5923CFD02F057092001A7BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFBE2F057092001A7BA4 /* AppDelegate.swift */; };
+		5923CFD12F057092001A7BA4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC02F057092001A7BA4 /* CustomButton.swift */; };
+		5923CFD22F057092001A7BA4 /* NestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC42F057092001A7BA4 /* NestedTypes.swift */; };
+		5923CFD32F057092001A7BA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC52F057092001A7BA4 /* SceneDelegate.swift */; };
+		5923CFD42F057092001A7BA4 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC62F057092001A7BA4 /* ShadowView.swift */; };
+		5923CFD52F057092001A7BA4 /* TeaDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC72F057092001A7BA4 /* TeaDataManager.swift */; };
+		5923CFD62F057092001A7BA4 /* TeaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC82F057092001A7BA4 /* TeaManager.swift */; };
+		5923CFD72F057092001A7BA4 /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */; };
+		5923CFD82F057092001A7BA4 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */; };
+		5923CFD92F057092001A7BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCB2F057092001A7BA4 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		5923CFBE2F057092001A7BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5923CFBF2F057092001A7BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5923CFC02F057092001A7BA4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5923CFC12F057092001A7BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5923CFC22F057092001A7BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5923CFC42F057092001A7BA4 /* NestedTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTypes.swift; sourceTree = "<group>"; };
+		5923CFC52F057092001A7BA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5923CFC62F057092001A7BA4 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		5923CFC72F057092001A7BA4 /* TeaDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaDataManager.swift; sourceTree = "<group>"; };
+		5923CFC82F057092001A7BA4 /* TeaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaManager.swift; sourceTree = "<group>"; };
+		5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
+		5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
+		5923CFCB2F057092001A7BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		592E8A802EF6EEB000ED8454 /* Exam21Lesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam21Lesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		592E8A922EF6EEB100ED8454 /* Exceptions for "Exam21Lesson" folder in "Exam21Lesson" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 592E8A7F2EF6EEB000ED8454 /* Exam21Lesson */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		592E8A822EF6EEB000ED8454 /* Exam21Lesson */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				592E8A922EF6EEB100ED8454 /* Exceptions for "Exam21Lesson" folder in "Exam21Lesson" target */,
-			);
-			path = Exam21Lesson;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		592E8A7D2EF6EEB000ED8454 /* Frameworks */ = {
@@ -42,10 +49,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5923CFCC2F057092001A7BA4 /* Exam21Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFDE2F057163001A7BA4 /* Resources */,
+				5923CFDC2F0570DE001A7BA4 /* Services */,
+				5923CFDB2F0570C2001A7BA4 /* Extensions */,
+				5923CFDD2F0570FB001A7BA4 /* CustomElements */,
+				5923CFDA2F0570A0001A7BA4 /* ViewControllers */,
+			);
+			path = Exam21Lesson;
+			sourceTree = "<group>";
+		};
+		5923CFDA2F0570A0001A7BA4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFCB2F057092001A7BA4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5923CFDB2F0570C2001A7BA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */,
+				5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5923CFDC2F0570DE001A7BA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFC72F057092001A7BA4 /* TeaDataManager.swift */,
+				5923CFC82F057092001A7BA4 /* TeaManager.swift */,
+				5923CFC42F057092001A7BA4 /* NestedTypes.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5923CFDD2F0570FB001A7BA4 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFC62F057092001A7BA4 /* ShadowView.swift */,
+				5923CFC02F057092001A7BA4 /* CustomButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		5923CFDE2F057163001A7BA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5923CFBF2F057092001A7BA4 /* Assets.xcassets */,
+				5923CFC12F057092001A7BA4 /* Info.plist */,
+				5923CFC32F057092001A7BA4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		592E8A772EF6EEB000ED8454 = {
 			isa = PBXGroup;
 			children = (
-				592E8A822EF6EEB000ED8454 /* Exam21Lesson */,
+				5923CFCC2F057092001A7BA4 /* Exam21Lesson */,
+				5923CFBE2F057092001A7BA4 /* AppDelegate.swift */,
+				5923CFC52F057092001A7BA4 /* SceneDelegate.swift */,
 				592E8A812EF6EEB000ED8454 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +139,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				592E8A822EF6EEB000ED8454 /* Exam21Lesson */,
 			);
 			name = Exam21Lesson;
 			packageProductDependencies = (
@@ -122,6 +186,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5923CFCD2F057092001A7BA4 /* Assets.xcassets in Resources */,
+				5923CFCF2F057092001A7BA4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +198,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5923CFD02F057092001A7BA4 /* AppDelegate.swift in Sources */,
+				5923CFD12F057092001A7BA4 /* CustomButton.swift in Sources */,
+				5923CFD22F057092001A7BA4 /* NestedTypes.swift in Sources */,
+				5923CFD32F057092001A7BA4 /* SceneDelegate.swift in Sources */,
+				5923CFD42F057092001A7BA4 /* ShadowView.swift in Sources */,
+				5923CFD52F057092001A7BA4 /* TeaDataManager.swift in Sources */,
+				5923CFD62F057092001A7BA4 /* TeaManager.swift in Sources */,
+				5923CFD72F057092001A7BA4 /* UIStackView+Subviews.swift in Sources */,
+				5923CFD82F057092001A7BA4 /* UIView+Subviews.swift in Sources */,
+				5923CFD92F057092001A7BA4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5923CFC32F057092001A7BA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5923CFC22F057092001A7BA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		592E8A942EF6EEB100ED8454 /* Debug */ = {
@@ -146,7 +233,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Exam21Lesson/Info.plist;
+				INFOPLIST_FILE = Exam21Lesson/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -176,7 +263,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Exam21Lesson/Info.plist;
+				INFOPLIST_FILE = Exam21Lesson/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
