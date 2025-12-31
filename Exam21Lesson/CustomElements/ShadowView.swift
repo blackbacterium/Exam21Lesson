@@ -26,6 +26,10 @@ class ShadowView: UIView {
 // MARK: - Setup View
 extension ShadowView {
     
+    func updateImage(imageName: String) {
+        imageView.image = UIImage(named: imageName)
+    }
+    
     private func setupImageView(imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.contentMode = .scaleAspectFit
@@ -33,10 +37,6 @@ extension ShadowView {
         imageView.clipsToBounds = true
         
         addSubview(imageView)
-    }
-    
-    func updateImage(imageName: String) {
-        imageView.image = UIImage(named: imageName)
     }
     
     private func setupView() {

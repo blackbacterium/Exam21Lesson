@@ -75,7 +75,7 @@ private extension ViewController {
         textLabel.textAlignment = .center
     }
     
-    private func setupStackView() {
+    func setupStackView() {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.alignment = .fill
@@ -86,29 +86,29 @@ private extension ViewController {
 }
 
 //MARK: - Setup Layout
-    private extension ViewController {
+private extension ViewController {
+    
+    func setupLayout() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        lastButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        firstButton.translatesAutoresizingMaskIntoConstraints = false
         
-        func setupLayout() {
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            lastButton.translatesAutoresizingMaskIntoConstraints = false
-            nextButton.translatesAutoresizingMaskIntoConstraints = false
-            firstButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
             
-            NSLayoutConstraint.activate([
-                stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-                stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-                stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
-                
-                imageTea.heightAnchor.constraint(equalTo: stackView.widthAnchor),
-                
-                lastButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
-                lastButton.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -50),
-                nextButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
-                nextButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 50),
-                
-                firstButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 80),
-                firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
-        }
+            imageTea.heightAnchor.constraint(equalTo: stackView.widthAnchor),
+            
+            lastButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            lastButton.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -50),
+            nextButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            nextButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 50),
+            
+            firstButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 80),
+            firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
+}

@@ -28,6 +28,7 @@ class CustomButton: UIButton {
 
 // MARK: - Setup View
 extension CustomButton {
+    
     private func setupButton(text: String, bdColor: UIColor) {
         setTitle(text, for: .normal)
         setTitleColor(.white, for: .normal)
@@ -48,6 +49,7 @@ extension CustomButton {
 
 // MARK: - Constants
 private extension CustomButton {
+    
     enum Constant {
         static let cornerRadius: CGFloat = 10
     }
