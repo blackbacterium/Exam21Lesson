@@ -21,6 +21,10 @@ class ShadowView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - Setup View
+extension ShadowView {
     
     private func setupImageView(imageName: String) {
         imageView.image = UIImage(named: imageName)
@@ -42,8 +46,12 @@ class ShadowView: UIView {
         layer.shadowOffset = CGSize(width: 5, height: 5)
         layer.shadowRadius = 10
     }
+}
+
+//MARK: - Setup Layout
+private extension ShadowView {
     
-    private func setupLayout() {
+    func setupLayout() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
