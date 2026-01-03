@@ -10,12 +10,15 @@ import UIKit
 class ViewController: UIViewController {
     
     private let textLabel = UILabel()
-    private let imageTea = ShadowView(imageName: NameTea.tea_1.rawValue)
+    private let imageTea = ShadowView(imageName: NameTea.tea_1)
+    
     private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal)
     private let nextButton = CustomButton(textButton: "Next", bgColor: .white)
     private let firstButton = CustomButton(textButton: "First", bgColor: .red)
-    private let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
+    
     private let stackView = UIStackView()
+    
+    private let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +70,7 @@ private extension ViewController {
     }
     
     func setupLabel() {
-        textLabel.text = DescriptionTeas.tea_1.rawValue
+        textLabel.text = DescriptionTeas.tea_1
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
         textLabel.font = .systemFont(ofSize: 14, weight: .medium)
