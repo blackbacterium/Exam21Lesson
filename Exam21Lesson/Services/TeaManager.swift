@@ -9,7 +9,7 @@ import UIKit
 
 class TeaManager {
     static func getTeas() -> [TeaModel] {
-        return [
+        [
             TeaModel(nameTea: NameTea.tea_1,
                      description: DescriptionTeas.tea_1),
             TeaModel(nameTea: NameTea.tea_2,
