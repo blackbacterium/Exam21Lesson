@@ -15,7 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
+        
+        let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
+        let viewController = ViewController()
+        viewController.teaDataManager = teaDataManager
+        
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
         self.window = window
         

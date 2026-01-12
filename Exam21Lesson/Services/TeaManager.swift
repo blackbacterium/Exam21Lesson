@@ -7,7 +7,11 @@
 
 import UIKit
 
-class TeaManager {
+protocol StorageArray {
+    static func getTeas() -> [TeaModel]
+}
+
+class TeaManager: StorageArray {
     static func getTeas() -> [TeaModel] {
         [
             TeaModel(nameTea: NameTea.tea_1,

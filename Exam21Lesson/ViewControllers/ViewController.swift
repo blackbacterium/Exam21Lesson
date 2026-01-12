@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     private let stackView = UIStackView()
     
-    private let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
+    var teaDataManager: ControlArray?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     
     @objc
     private func NextButtonTapped() {
-        let nextTea = teaDataManager.getNextTea()
-        textLabel.text = nextTea.description
-        imageTea.updateImage(imageName: nextTea.nameTea)
+        let nextTea = teaDataManager?.getNextTea()
+        textLabel.text = nextTea?.description
+        imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
     }
 }
 
@@ -48,9 +48,9 @@ private extension ViewController {
     
     func addAction() {
         let actionLastButton = UIAction { _ in
-            let lastValue = self.teaDataManager.getLastTea()
-            self.textLabel.text = lastValue.description
-            self.imageTea.updateImage(imageName: lastValue.nameTea)
+            let lastValue = self.teaDataManager?.getLastTea()
+            self.textLabel.text = lastValue?.description
+            self.imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
         }
         
         lastButton.addAction(actionLastButton, for: .touchUpInside)
@@ -61,9 +61,9 @@ private extension ViewController {
             for: .touchUpInside)
         
         let actionFirstButton = UIAction { _ in
-            let FirstValue = self.teaDataManager.getFirstTea()
-            self.textLabel.text = FirstValue.description
-            self.imageTea.updateImage(imageName: FirstValue.nameTea)
+            let FirstValue = self.teaDataManager?.getFirstTea()
+            self.textLabel.text = FirstValue?.description
+            self.imageTea.updateImage(imageName: FirstValue?.nameTea ?? "")
         }
         
         firstButton.addAction(actionFirstButton, for: .touchUpInside)

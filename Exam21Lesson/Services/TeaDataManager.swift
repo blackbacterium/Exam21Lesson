@@ -7,7 +7,14 @@
 
 import UIKit
 
-class TeaDataManager {
+protocol ControlArray {
+    func getCurrentTea() -> TeaModel
+    func getNextTea() -> TeaModel
+    func getLastTea() -> TeaModel
+    func getFirstTea() -> TeaModel
+}
+
+class TeaDataManager: ControlArray {
     private var teas: [TeaModel] = []
     private var currentIndex = 0
     
