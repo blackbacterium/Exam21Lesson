@@ -9,7 +9,8 @@ import UIKit
 
 struct TeaModel {
     let nameTea: String
-    let description: String
+    let teaDescription: String
+
 }
 
 enum NameTea {
@@ -32,3 +33,17 @@ enum DescriptionTeas {
     static let tea_7 = "Шэн пуэр Цзингу Байлун /nВкус раскрывается постепенно. В первых проливах — легкий, прозрачный, абрикосовый. Затем настой густеет, формируется цельная красивая мелодия: оттенки сухофруктов, пряностей, цветов и дорогого трубочного табака. Тело чая легкое, текстура мягкая. Послевкусие сочное и красивое. \nТемпература заваривания: 90-100°C"
 }
 
+
+// MARK: - Comparable
+extension TeaModel: Comparable {
+    static func < (lhs: TeaModel, rhs: TeaModel) -> Bool {
+        lhs.nameTea < rhs.nameTea
+    }
+}
+
+// MARK: - CustomStringConvertible
+extension TeaModel: CustomStringConvertible {
+    var description: String {
+        "Название картинки: \(nameTea), описание: \(teaDescription)"
+    }
+}

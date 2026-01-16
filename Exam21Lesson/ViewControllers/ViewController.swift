@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     
     private let stackView = UIStackView()
     
-    var teaDataManager: ControlArray?
+    var teaDataManager: ITeaDataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        imageTea.updateImage(imageName: teaDataManager?.getCurrentTea().nameTea ?? "")
         
         setupLabel()
         lastButton.setupShadow()
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     @objc
     private func NextButtonTapped() {
         let nextTea = teaDataManager?.getNextTea()
-        textLabel.text = nextTea?.description
+        textLabel.text = nextTea?.teaDescription
         imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
     }
 }
@@ -49,7 +50,7 @@ private extension ViewController {
     func addAction() {
         let actionLastButton = UIAction { _ in
             let lastValue = self.teaDataManager?.getLastTea()
-            self.textLabel.text = lastValue?.description
+            self.textLabel.text = lastValue?.teaDescription
             self.imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
         }
         
@@ -62,7 +63,7 @@ private extension ViewController {
         
         let actionFirstButton = UIAction { _ in
             let FirstValue = self.teaDataManager?.getFirstTea()
-            self.textLabel.text = FirstValue?.description
+            self.textLabel.text = FirstValue?.teaDescription
             self.imageTea.updateImage(imageName: FirstValue?.nameTea ?? "")
         }
         
@@ -70,7 +71,7 @@ private extension ViewController {
     }
     
     func setupLabel() {
-        textLabel.text = DescriptionTeas.tea_1
+        textLabel.text = teaDataManager?.getCurrentTea().teaDescription
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
         textLabel.font = .systemFont(ofSize: 14, weight: .medium)

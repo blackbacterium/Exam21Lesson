@@ -16,14 +16,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let teaDataManager = TeaDataManager(teas: TeaManager.getTeas())
+        let teaManager: ITeaManager = TeaManager()
+        let sortedTeas = teaManager.getTeas().sorted(by: <)
+        let teaDataManager = TeaDataManager(teas: sortedTeas)
         let viewController = ViewController()
         viewController.teaDataManager = teaDataManager
+        
+        printTeas(sortedTeas)
         
         window.rootViewController = viewController
         window.makeKeyAndVisible()
         self.window = window
         
+    }
+    
+    private func printTeas(_ teas: [TeaModel]) {
+        for tea in teas {
+            print(tea)
+            print("")
+        }
     }
 }
 
