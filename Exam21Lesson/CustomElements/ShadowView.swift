@@ -10,11 +10,15 @@ import UIKit
 class ShadowView: UIView {
     private let imageView = UIImageView()
     
-    init(imageName: String) {
+    init(imageName: String? = nil) {
         super.init(frame: .zero)
         setupView()
-        setupImageView(imageName: imageName)
+        setupImageView()
         setupLayout()
+        
+        if let imageName {
+            updateImage(imageName: imageName)
+        }
     }
     
     @available(*, unavailable)
@@ -30,8 +34,7 @@ extension ShadowView {
         imageView.image = UIImage(named: imageName)
     }
     
-    private func setupImageView(imageName: String) {
-        imageView.image = UIImage(named: imageName)
+    private func setupImageView() {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true

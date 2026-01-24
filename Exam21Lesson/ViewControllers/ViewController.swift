@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private let textLabel = UILabel()
-    private let imageTea = ShadowView(imageName: NameTea.tea_1)
+    private let imageTea = ShadowView()
     
     private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal)
     private let nextButton = CustomButton(textButton: "Next", bgColor: .white)
