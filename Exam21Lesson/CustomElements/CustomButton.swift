@@ -7,10 +7,18 @@
 
 import UIKit
 
+protocol ICustomButtonDelegate {
+    func pressedButton(_ button: UIButton)
+}
+
 class CustomButton: UIButton {
+    
+    var delegate: ICustomButtonDelegate?
+    
     init(textButton: String, bgColor: UIColor) {
         super.init(frame: .zero)
         setupButton(text: textButton, bdColor: bgColor)
+        addAction()
         
     }
     
@@ -44,6 +52,13 @@ extension CustomButton {
         layer.shadowOpacity = 0.7
         layer.shadowOffset = CGSize(width: 8, height: 8)
         layer.shadowRadius = 10
+    }
+    
+    private func addAction() {
+        let action = UIAction { _ in
+            self.delegate?.pressedButton(self)
+        }
+        addAction(action, for: .touchUpInside)
     }
 }
 

@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastButton.delegate = self
+        nextButton.delegate = self
+        firstButton.delegate = self
         view.backgroundColor = .white
         imageTea.updateImage(imageName: teaDataManager?.getCurrentTea().nameTea ?? "")
         
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
         nextButton.setTitleColor(.black, for: .normal)
         setupStackView()
         view.addMoreSubviews(stackView, lastButton, nextButton, firstButton)
-        addAction()
+//        addAction()
         
         setupLayout()
     }
@@ -47,28 +50,28 @@ class ViewController: UIViewController {
 // MARK: - Setup View
 private extension ViewController {
     
-    func addAction() {
-        let actionLastButton = UIAction { _ in
-            let lastValue = self.teaDataManager?.getLastTea()
-            self.textLabel.text = lastValue?.teaDescription
-            self.imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
-        }
-        
-        lastButton.addAction(actionLastButton, for: .touchUpInside)
-        
-        nextButton.addTarget(
-            self,
-            action: #selector(NextButtonTapped),
-            for: .touchUpInside)
-        
-        let actionFirstButton = UIAction { _ in
-            let FirstValue = self.teaDataManager?.getFirstTea()
-            self.textLabel.text = FirstValue?.teaDescription
-            self.imageTea.updateImage(imageName: FirstValue?.nameTea ?? "")
-        }
-        
-        firstButton.addAction(actionFirstButton, for: .touchUpInside)
-    }
+//    func addAction() {
+//        let actionLastButton = UIAction { _ in
+//            let lastValue = self.teaDataManager?.getLastTea()
+//            self.textLabel.text = lastValue?.teaDescription
+//            self.imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
+//        }
+//        
+//        lastButton.addAction(actionLastButton, for: .touchUpInside)
+//        
+//        nextButton.addTarget(
+//            self,
+//            action: #selector(NextButtonTapped),
+//            for: .touchUpInside)
+//        
+//        let actionFirstButton = UIAction { _ in
+//            let FirstValue = self.teaDataManager?.getFirstTea()
+//            self.textLabel.text = FirstValue?.teaDescription
+//            self.imageTea.updateImage(imageName: FirstValue?.nameTea ?? "")
+//        }
+//        
+//        firstButton.addAction(actionFirstButton, for: .touchUpInside)
+//    }
     
     func setupLabel() {
         textLabel.text = teaDataManager?.getCurrentTea().teaDescription
@@ -88,6 +91,26 @@ private extension ViewController {
         stackView.addMoreArrangedSubviews(imageTea, textLabel)
     }
 }
+
+//MARK: - ICustomButtonDelegate
+extension ViewController: ICustomButtonDelegate {
+    func pressedButton(_ button: UIButton) {
+        if button == lastButton {
+            let lastValue = teaDataManager?.getLastTea()
+            textLabel.text = lastValue?.teaDescription
+            imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
+        } else if button == nextButton {
+            let nextTea = teaDataManager?.getNextTea()
+            textLabel.text = nextTea?.teaDescription
+            imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
+        } else if button == firstButton {
+            let firstValue = teaDataManager?.getFirstTea()
+            textLabel.text = firstValue?.teaDescription
+            imageTea.updateImage(imageName: firstValue?.nameTea ?? "")
+        }
+    }
+}
+
 
 //MARK: - Setup Layout
 private extension ViewController {
