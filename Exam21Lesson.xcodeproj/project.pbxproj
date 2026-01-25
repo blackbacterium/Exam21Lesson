@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59042A1F2F267E3800B71142 /* UIView+print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59042A1E2F267E3800B71142 /* UIView+print.swift */; };
 		5923CFCD2F057092001A7BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5923CFBF2F057092001A7BA4 /* Assets.xcassets */; };
 		5923CFCF2F057092001A7BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5923CFC32F057092001A7BA4 /* LaunchScreen.storyboard */; };
 		5923CFD02F057092001A7BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFBE2F057092001A7BA4 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59042A1E2F267E3800B71142 /* UIView+print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+print.swift"; sourceTree = "<group>"; };
 		5923CFBE2F057092001A7BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5923CFBF2F057092001A7BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5923CFC02F057092001A7BA4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */,
 				5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */,
+				59042A1E2F267E3800B71142 /* UIView+print.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				5923CFD02F057092001A7BA4 /* AppDelegate.swift in Sources */,
 				5923CFD12F057092001A7BA4 /* CustomButton.swift in Sources */,
 				5923CFD22F057092001A7BA4 /* NestedTypes.swift in Sources */,
+				59042A1F2F267E3800B71142 /* UIView+print.swift in Sources */,
 				5923CFD32F057092001A7BA4 /* SceneDelegate.swift in Sources */,
 				5923CFD42F057092001A7BA4 /* ShadowView.swift in Sources */,
 				5923CFD52F057092001A7BA4 /* TeaDataManager.swift in Sources */,

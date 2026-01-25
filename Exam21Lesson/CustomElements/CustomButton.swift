@@ -13,6 +13,8 @@ protocol ICustomButtonDelegate {
 
 class CustomButton: UIButton {
     
+    var nameInstance: String?
+    
     var delegate: ICustomButtonDelegate?
     
     init(textButton: String, bgColor: UIColor) {

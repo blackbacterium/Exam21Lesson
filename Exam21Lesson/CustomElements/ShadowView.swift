@@ -8,6 +8,9 @@
 import UIKit
 
 class ShadowView: UIView {
+    
+    var nameInstance: String?
+    
     private let imageView = UIImageView()
     
     init(imageName: String? = nil) {

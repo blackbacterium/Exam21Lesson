@@ -25,7 +25,15 @@ class ViewController: UIViewController {
         lastButton.delegate = self
         nextButton.delegate = self
         firstButton.delegate = self
+        lastButton.nameInstance = "Кнопка - назад"
+        nextButton.nameInstance = "Кнопка - вперед"
+        firstButton.nameInstance = "Кнопка - возврат на начало"
+        imageTea.nameInstance = "Название картинки"
+        
         view.backgroundColor = .white
+        print(view.countUIButton(imageTea, lastButton, nextButton, firstButton))
+        view.printAllSubviews(imageTea, lastButton, nextButton, firstButton)
+        
         imageTea.updateImage(imageName: teaDataManager?.getCurrentTea().nameTea ?? "")
         
         setupLabel()
@@ -39,12 +47,12 @@ class ViewController: UIViewController {
         setupLayout()
     }
     
-    @objc
-    private func NextButtonTapped() {
-        let nextTea = teaDataManager?.getNextTea()
-        textLabel.text = nextTea?.teaDescription
-        imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
-    }
+//    @objc
+//    private func NextButtonTapped() {
+//        let nextTea = teaDataManager?.getNextTea()
+//        textLabel.text = nextTea?.teaDescription
+//        imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
+//    }
 }
 
 // MARK: - Setup View
@@ -95,19 +103,17 @@ private extension ViewController {
 //MARK: - ICustomButtonDelegate
 extension ViewController: ICustomButtonDelegate {
     func pressedButton(_ button: UIButton) {
+        let teaModel: TeaModel?
+        
         if button == lastButton {
-            let lastValue = teaDataManager?.getLastTea()
-            textLabel.text = lastValue?.teaDescription
-            imageTea.updateImage(imageName: lastValue?.nameTea ?? "")
+            teaModel = teaDataManager?.getLastTea()
         } else if button == nextButton {
-            let nextTea = teaDataManager?.getNextTea()
-            textLabel.text = nextTea?.teaDescription
-            imageTea.updateImage(imageName: nextTea?.nameTea ?? "")
-        } else if button == firstButton {
-            let firstValue = teaDataManager?.getFirstTea()
-            textLabel.text = firstValue?.teaDescription
-            imageTea.updateImage(imageName: firstValue?.nameTea ?? "")
+            teaModel = teaDataManager?.getNextTea()
+        } else {
+            teaModel = teaDataManager?.getFirstTea()
         }
+        textLabel.text = teaModel?.teaDescription
+        imageTea.updateImage(imageName: teaModel?.nameTea ?? "")
     }
 }
 
