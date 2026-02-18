@@ -120,6 +120,7 @@ extension ViewController: ICustomButtonDelegate {
         }
         textLabel.text = teaModel?.teaDescription
         imageTea.updateImage(imageName: teaModel?.nameTea ?? "")
+        nameLabel.isHidden = true
     }
 }
 
