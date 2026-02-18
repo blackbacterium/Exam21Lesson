@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     private let textLabel = UILabel()
     private let imageTea = ShadowView()
+    private let nameLabel = UILabel()
     
     private let lastButton = CustomButton(textButton: "Last", bgColor: .systemTeal)
     private let nextButton = CustomButton(textButton: "Next", bgColor: .white)
@@ -31,12 +32,12 @@ class ViewController: UIViewController {
         imageTea.nameInstance = "Название картинки"
         
         view.backgroundColor = .white
-        print(view.countUIButton(imageTea, lastButton, nextButton, firstButton))
-        view.printAllSubviews(imageTea, lastButton, nextButton, firstButton)
+//        print(view.countUIButton(imageTea, lastButton, nextButton, firstButton))
+//        view.printAllSubviews(imageTea, lastButton, nextButton, firstButton)
         
         imageTea.updateImage(imageName: teaDataManager?.getCurrentTea().nameTea ?? "")
         
-        setupLabel()
+        setupLabels()
         lastButton.setupShadow()
         nextButton.setupShadow()
         nextButton.setTitleColor(.black, for: .normal)
@@ -47,6 +48,10 @@ class ViewController: UIViewController {
         setupLayout()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        nameLabel.text =  teaDataManager?.getCurrentTea().nameTea ?? ""
+        nameLabel.isHidden = false
+    }
 //    @objc
 //    private func NextButtonTapped() {
 //        let nextTea = teaDataManager?.getNextTea()
@@ -81,13 +86,14 @@ private extension ViewController {
 //        firstButton.addAction(actionFirstButton, for: .touchUpInside)
 //    }
     
-    func setupLabel() {
+    func setupLabels() {
         textLabel.text = teaDataManager?.getCurrentTea().teaDescription
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
         textLabel.font = .systemFont(ofSize: 14, weight: .medium)
         textLabel.textColor = .black
         textLabel.textAlignment = .center
+        nameLabel.isHidden = true
     }
     
     func setupStackView() {
@@ -96,7 +102,7 @@ private extension ViewController {
         stackView.alignment = .fill
         stackView.spacing = 10
         
-        stackView.addMoreArrangedSubviews(imageTea, textLabel)
+        stackView.addMoreArrangedSubviews(imageTea, textLabel, nameLabel)
     }
 }
 

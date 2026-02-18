@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = ViewController()
         viewController.teaDataManager = teaDataManager
         
-        printTeas(sortedTeas)
+//        printTeas(sortedTeas)
         
         window.rootViewController = viewController
         window.makeKeyAndVisible()
