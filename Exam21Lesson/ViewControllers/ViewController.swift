@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         nameLabel.isHidden = false
     }
 //    @objc
-//    private func NextButtonTapped() {
+//    private func nextButtonTapped() {
 //        let nextTea = teaDataManager?.getNextTea()
 //        textLabel.text = nextTea?.teaDescription
 //        imageTea.updateImage(imageName: nextTea?.nameTea ?? "")

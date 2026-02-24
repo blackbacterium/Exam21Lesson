@@ -12,6 +12,7 @@ protocol ITeaDataManager {
     func getNextTea() -> TeaModel
     func getLastTea() -> TeaModel
     func getFirstTea() -> TeaModel
+    func getModelByImageName(_ imageName: String) -> TeaModel?
 }
 
 class TeaDataManager: ITeaDataManager {
@@ -43,6 +44,17 @@ class TeaDataManager: ITeaDataManager {
     func getFirstTea() -> TeaModel {
         currentIndex = 0
         return getCurrentTea()
+    }
+    
+    func getModelByImageName(_ imageName: String) -> TeaModel? {
+        let teaManager: ITeaManager = TeaManager()
+        let Teas = teaManager.getTeas()
+        for currentModel in Teas {
+            if currentModel.nameTea == imageName {
+                return currentModel
+            }
+        }
+        return nil
     }
 }
 

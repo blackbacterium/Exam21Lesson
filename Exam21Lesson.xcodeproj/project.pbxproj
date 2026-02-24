@@ -20,6 +20,7 @@
 		5923CFD72F057092001A7BA4 /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */; };
 		5923CFD82F057092001A7BA4 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */; };
 		5923CFD92F057092001A7BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCB2F057092001A7BA4 /* ViewController.swift */; };
+		59DD57F32F4B7A8B009AC763 /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		5923CFCB2F057092001A7BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		592E8A802EF6EEB000ED8454 /* Exam21Lesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam21Lesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				5923CFCB2F057092001A7BA4 /* ViewController.swift */,
+				59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				5923CFD32F057092001A7BA4 /* SceneDelegate.swift in Sources */,
 				5923CFD42F057092001A7BA4 /* ShadowView.swift in Sources */,
 				5923CFD52F057092001A7BA4 /* TeaDataManager.swift in Sources */,
+				59DD57F32F4B7A8B009AC763 /* FindImageViewController.swift in Sources */,
 				5923CFD62F057092001A7BA4 /* TeaManager.swift in Sources */,
 				5923CFD72F057092001A7BA4 /* UIStackView+Subviews.swift in Sources */,
 				5923CFD82F057092001A7BA4 /* UIView+Subviews.swift in Sources */,

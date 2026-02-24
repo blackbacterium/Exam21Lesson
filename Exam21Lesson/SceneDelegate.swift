@@ -19,12 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let teaManager: ITeaManager = TeaManager()
         let sortedTeas = teaManager.getTeas().sorted(by: <)
         let teaDataManager = TeaDataManager(teas: sortedTeas)
-        let viewController = ViewController()
-        viewController.teaDataManager = teaDataManager
+//        let viewController = ViewController()
+        let findImageViewController = FindImageViewController()
+        findImageViewController.teaDataManager = teaDataManager
         
 //        printTeas(sortedTeas)
         
-        window.rootViewController = viewController
+        window.rootViewController = findImageViewController
         window.makeKeyAndVisible()
         self.window = window
         
