@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        nameLabel.text =  teaDataManager?.getCurrentTea().nameTea ?? ""
+        nameLabel.text =  teaDataManager?.getCurrentTea().nameTea
         nameLabel.isHidden = false
     }
 //    @objc
