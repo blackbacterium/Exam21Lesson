@@ -88,7 +88,6 @@ private extension PanImageViewController {
 
 private extension PanImageViewController {
     enum Constants {
-        static let imageCornerRadius = 11.0
         static let initialImageDimSize = 150.0
     }
 }
