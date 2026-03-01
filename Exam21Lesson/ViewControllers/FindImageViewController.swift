@@ -34,7 +34,7 @@ class FindImageViewController: UIViewController {
         setupLayout()
     }
     
-    func afterTouch() {
+    func didTapSearch() {
         view.endEditing(true)
         guard let currentModel = teaDataManager?.getModelByImageName(textField.text ?? "") else {
             textLabel.text = "Такой картинки нет"
@@ -52,7 +52,7 @@ class FindImageViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        afterTouch()
+        didTapSearch()
     }
 }
 
@@ -93,14 +93,14 @@ private extension FindImageViewController {
 //MARK: - ICustomButtonDelegate
 extension FindImageViewController: ICustomButtonDelegate {
     func pressedButton(_ button: UIButton) {
-        afterTouch()
+        didTapSearch()
     }
 }
 
 // MARK: - UITextFieldDelegate
 extension FindImageViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        afterTouch()
+        didTapSearch()
         return true
     }
 }

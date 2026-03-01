@@ -47,9 +47,7 @@ class TeaDataManager: ITeaDataManager {
     }
     
     func getModelByImageName(_ imageName: String) -> TeaModel? {
-        let teaManager: ITeaManager = TeaManager()
-        let Teas = teaManager.getTeas()
-        for currentModel in Teas {
+        for currentModel in teas {
             if currentModel.nameTea == imageName {
                 return currentModel
             }
