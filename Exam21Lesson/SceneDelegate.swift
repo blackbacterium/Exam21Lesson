@@ -16,17 +16,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let teaManager: ITeaManager = TeaManager()
-        let sortedTeas = teaManager.getTeas().sorted(by: <)
-        let teaDataManager = TeaDataManager(teas: sortedTeas)
+//        let teaManager: ITeaManager = TeaManager()
+//        let sortedTeas = teaManager.getTeas().sorted(by: <)
+//        let teaDataManager = TeaDataManager(teas: sortedTeas)
+        let textManager = TextManager()
 //        let viewController = ViewController()
 //        let findImageViewController = FindImageViewController()
-        let panImageViewController = PanImageViewController()
-        panImageViewController.teaDataManager = teaDataManager
+//        let panImageViewController = PanImageViewController()
+        let licenseAgreementViewController = LicenseAgreementViewController()
+        licenseAgreementViewController.textManager = textManager
         
 //        printTeas(sortedTeas)
         
-        window.rootViewController = panImageViewController
+        window.rootViewController = licenseAgreementViewController
         window.makeKeyAndVisible()
         self.window = window
         

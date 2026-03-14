@@ -17,7 +17,7 @@ class PanImageViewController: UIViewController {
     private var topAnchorConstraint: NSLayoutConstraint!
     private var centerXConstraint: NSLayoutConstraint!
     
-    var teaDataManager: ITeaDataManager?
+//    var teaDataManager: ITeaDataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
