@@ -8,6 +8,9 @@
 import UIKit
 
 protocol ITeaDataManager {
+    func toggleMark(index: Int)
+    func removeTea(index: Int)
+    func getAllTeas() -> [TeaModel]
     func getCurrentTea() -> TeaModel
     func getNextTea() -> TeaModel
     func getLastTea() -> TeaModel
@@ -21,6 +24,18 @@ class TeaDataManager: ITeaDataManager {
     
     init(teas: [TeaModel]) {
         self.teas = teas
+    }
+    
+    func toggleMark(index: Int) {
+        teas[index].isMark.toggle()
+    }
+    
+    func removeTea(index: Int) {
+        teas.remove(at: index)
+    }
+    
+    func getAllTeas() -> [TeaModel] {
+        teas
     }
     
     func getCurrentTea() -> TeaModel {

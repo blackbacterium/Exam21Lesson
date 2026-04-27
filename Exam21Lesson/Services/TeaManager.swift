@@ -15,19 +15,19 @@ class TeaManager: ITeaManager {
     func getTeas() -> [TeaModel] {
         [
             TeaModel(nameTea: NameTea.tea_1,
-                     teaDescription: DescriptionTeas.tea_1),
+                     teaDescription: DescriptionTeas.tea_1, isMark: false),
             TeaModel(nameTea: NameTea.tea_2,
-                     teaDescription: DescriptionTeas.tea_2),
+                     teaDescription: DescriptionTeas.tea_2, isMark: false),
             TeaModel(nameTea: NameTea.tea_3,
-                     teaDescription: DescriptionTeas.tea_3),
+                     teaDescription: DescriptionTeas.tea_3, isMark: false),
             TeaModel(nameTea: NameTea.tea_4,
-                     teaDescription: DescriptionTeas.tea_4),
+                     teaDescription: DescriptionTeas.tea_4, isMark: false),
             TeaModel(nameTea: NameTea.tea_5,
-                     teaDescription: DescriptionTeas.tea_5),
+                     teaDescription: DescriptionTeas.tea_5, isMark: false),
             TeaModel(nameTea: NameTea.tea_6,
-                     teaDescription: DescriptionTeas.tea_6),
+                     teaDescription: DescriptionTeas.tea_6, isMark: false),
             TeaModel(nameTea: NameTea.tea_7,
-                     teaDescription: DescriptionTeas.tea_7)
+                     teaDescription: DescriptionTeas.tea_7, isMark: false)
         ]
     }
 }

@@ -20,6 +20,7 @@
 		5923CFD72F057092001A7BA4 /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFC92F057092001A7BA4 /* UIStackView+Subviews.swift */; };
 		5923CFD82F057092001A7BA4 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */; };
 		5923CFD92F057092001A7BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923CFCB2F057092001A7BA4 /* ViewController.swift */; };
+		59445AF02F968693008E5C46 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59445AEF2F968693008E5C46 /* ImageListViewController.swift */; };
 		597EDC552F6597E900249FEF /* LicenseAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597EDC542F6597E900249FEF /* LicenseAgreementViewController.swift */; };
 		597EDC572F659CBC00249FEF /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597EDC562F659CBC00249FEF /* TextManager.swift */; };
 		59DD57F32F4B7A8B009AC763 /* FindImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */; };
@@ -42,6 +43,7 @@
 		5923CFCA2F057092001A7BA4 /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		5923CFCB2F057092001A7BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		592E8A802EF6EEB000ED8454 /* Exam21Lesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam21Lesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59445AEF2F968693008E5C46 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		597EDC542F6597E900249FEF /* LicenseAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseAgreementViewController.swift; sourceTree = "<group>"; };
 		597EDC562F659CBC00249FEF /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 		59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImageViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				5923CFCB2F057092001A7BA4 /* ViewController.swift */,
+				59445AEF2F968693008E5C46 /* ImageListViewController.swift */,
 				597EDC542F6597E900249FEF /* LicenseAgreementViewController.swift */,
 				59DD57F42F54B8CF009AC763 /* PanImageViewController.swift */,
 				59DD57F22F4B7A8B009AC763 /* FindImageViewController.swift */,
@@ -219,6 +222,7 @@
 				5923CFD22F057092001A7BA4 /* NestedTypes.swift in Sources */,
 				597EDC552F6597E900249FEF /* LicenseAgreementViewController.swift in Sources */,
 				59042A1F2F267E3800B71142 /* UIView+print.swift in Sources */,
+				59445AF02F968693008E5C46 /* ImageListViewController.swift in Sources */,
 				5923CFD32F057092001A7BA4 /* SceneDelegate.swift in Sources */,
 				5923CFD42F057092001A7BA4 /* ShadowView.swift in Sources */,
 				59DD57F52F54B8CF009AC763 /* PanImageViewController.swift in Sources */,

@@ -15,30 +15,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        
-//        let teaManager: ITeaManager = TeaManager()
-//        let sortedTeas = teaManager.getTeas().sorted(by: <)
-//        let teaDataManager = TeaDataManager(teas: sortedTeas)
-        let textManager = TextManager()
-//        let viewController = ViewController()
-//        let findImageViewController = FindImageViewController()
-//        let panImageViewController = PanImageViewController()
-        let licenseAgreementViewController = LicenseAgreementViewController()
-        licenseAgreementViewController.textManager = textManager
-        
-//        printTeas(sortedTeas)
-        
-        window.rootViewController = licenseAgreementViewController
+
+        let imageListViewController = ImageListViewController()
+        imageListViewController.teaDataManager = buildTeaDataManager()
+
+        window.rootViewController = imageListViewController
         window.makeKeyAndVisible()
         self.window = window
-        
-    }
-    
-    private func printTeas(_ teas: [TeaModel]) {
-        for tea in teas {
-            print(tea)
-            print("")
-        }
     }
 }
 
+extension SceneDelegate {
+    func buildTeaDataManager() -> ITeaDataManager {
+        let teaManager: ITeaManager = TeaManager()
+        let teaDataManager: ITeaDataManager = TeaDataManager(
+            teas: teaManager.getTeas().sorted(by: <)
+        )
+        return teaDataManager
+    }
+}
