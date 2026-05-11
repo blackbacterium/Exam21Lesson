@@ -10,7 +10,7 @@ import UIKit
 struct TeaModel {
     let nameTea: String
     let teaDescription: String
-    var isMark: Bool
+    var isMark = false
 }
 
 enum NameTea {

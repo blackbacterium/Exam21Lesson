@@ -16,10 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        let imageListViewController = ImageListViewController()
-        imageListViewController.teaDataManager = buildTeaDataManager()
+        let marTableViewController = MarTableViewController()
+        marTableViewController.teaDataManager = buildTeaDataManager()
 
-        window.rootViewController = imageListViewController
+        window.rootViewController = marTableViewController
         window.makeKeyAndVisible()
         self.window = window
     }

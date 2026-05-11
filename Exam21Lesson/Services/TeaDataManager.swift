@@ -8,6 +8,7 @@
 import UIKit
 
 protocol ITeaDataManager {
+    func getIsMarkTeas() -> [TeaModel]
     func toggleMark(index: Int)
     func removeTea(index: Int)
     func getAllTeas() -> [TeaModel]
@@ -24,6 +25,16 @@ class TeaDataManager: ITeaDataManager {
     
     init(teas: [TeaModel]) {
         self.teas = teas
+    }
+    
+    func getIsMarkTeas() -> [TeaModel] {
+        var isMarkTeas = [TeaModel]()
+        for tea in teas {
+            if tea.isMark {
+                isMarkTeas.append(tea)
+            }
+        }
+        return isMarkTeas
     }
     
     func toggleMark(index: Int) {
