@@ -47,3 +47,6 @@ extension TeaModel: CustomStringConvertible {
         "Название картинки: \(nameTea), описание: \(teaDescription)"
     }
 }
+
+// MARK: - Equatable
+extension TeaModel: Equatable {}

@@ -9,11 +9,14 @@ import UIKit
 
 class TeaCell: UITableViewCell {
     
+    var action: (() -> ())?
+    
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     
     private let imageTea = UIImageView()
     private let checkButton = UIButton()
+    private var toggleCheckMark = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,9 +31,19 @@ class TeaCell: UITableViewCell {
         titleLabel.text = tea.nameTea
         descriptionLabel.text = tea.description
         imageTea.image = UIImage(named: tea.nameTea)
+        toggleCheckMark = tea.isMark
         
-        let checkMark = tea.isMark ? "checkmark.square.fill" : "checkmark.square"
+        let checkMark = toggleCheckMark ? "checkmark.square.fill" : "checkmark.square"
         checkButton.setImage(UIImage(systemName: checkMark), for: .normal)
+    }
+    
+    @objc
+    func deleteCheckMark() {
+        toggleCheckMark.toggle()
+        let checkMark = toggleCheckMark ? "checkmark.square.fill" : "checkmark.square"
+        checkButton.setImage(UIImage(systemName: checkMark), for: .normal)
+        
+        action?()
     }
 }
 
@@ -74,6 +87,10 @@ private extension TeaCell {
     
     func setupCheckButton() {
         checkButton.tintColor = .systemCyan
+        
+        checkButton.addTarget(self,
+                              action: #selector(deleteCheckMark),
+                              for: .touchUpInside)
     }
 }
 

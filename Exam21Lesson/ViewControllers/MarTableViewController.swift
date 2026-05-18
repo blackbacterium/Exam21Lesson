@@ -31,6 +31,14 @@ class MarTableViewController: UITableViewController {
         let tea = teaDataManager.getIsMarkTeas()[indexPath.row]
         
         cell.configure(tea: tea)
+        cell.action = { 
+            if let indexPath = tableView.indexPath(for: cell) {
+//                let tea = self.teaDataManager.getIsMarkTeas()[indexPath.row]
+                self.teaDataManager.toggleCheckMark(tea)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+                
+        }
         
         return cell
     }
