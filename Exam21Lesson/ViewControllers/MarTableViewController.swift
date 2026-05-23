@@ -15,6 +15,8 @@ class MarTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .darkGray
+        tableView.separatorStyle = .none
         tableView.register(TeaCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
@@ -30,15 +32,16 @@ class MarTableViewController: UITableViewController {
         }
         let tea = teaDataManager.getIsMarkTeas()[indexPath.row]
         
-        cell.configure(tea: tea)
         cell.action = { 
             if let indexPath = tableView.indexPath(for: cell) {
-//                let tea = self.teaDataManager.getIsMarkTeas()[indexPath.row]
                 self.teaDataManager.toggleCheckMark(tea)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
-                
         }
+        
+        cell.selectionStyle = .none
+        
+        cell.configure(tea: tea)
         
         return cell
     }
